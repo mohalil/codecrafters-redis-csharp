@@ -11,4 +11,5 @@ server.Start();
 server.AcceptSocket(); // wait for client
 
 var clientSocket = server.AcceptSocket(); // wait for client
-await clientSocket.SendAsync(Encoding.UTF8.GetBytes("+PONG\r\n"), SocketFlags.None);
+//await clientSocket.SendAsync(Encoding.UTF8.GetBytes("+PONG\r\n"), SocketFlags.None);
+clientSocket.SendAsync(Encoding.UTF8.GetBytes("+PONG\r\n"), SocketFlags.None);
